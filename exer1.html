@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hora de codar 3</title>
+  </head>
+
+  <body>
+    <script>
+      /*1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou menor que ZERO,
+      deve ser lido um novo valor.
+      Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor negativo.
+      O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor.*/
+
+      var valor1 = 5;
+      prompt("Digite o primeiro valor:");
+      var valor2 = 0;
+      prompt("Digite o segundo valor:");
+
+      if (valor2 <= 0) {
+        console.log("valor negativo ou zero, digite um valor positivo");
+        valor2 = prompt("digite um valor positivo");
+      }
+      let soma = valor1 / valor2;
+      {
+        alert(soma);
+      }
+
+      /*2 - Crie uma bomba relógio (usando somente código - para deixar claro!) cuja contagem regressiva vá de 30 a 0.
+      Utilize "document.write" para escrever em tela e no final da repetição escreva "EXPLOSÃO".*/
+
+      var tempo = 30;
+
+      function contador_de_tempo() {
+        if (tempo >= 0) {
+          document.write(tempo + "<br>");
+          tempo--;
+        } else {
+          clearInterval(intervalo);
+          document.write("EXPLOSÃO");
+        }
+      }
+
+      var intervalo = setInterval(contador_de_tempo, 1000);
+
+      /* 3 - Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente.
+      Exemplo: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1*/
+
+      for (var i = 10; i >= 1; i--) {
+        document.write(i + ",");
+      }
+
+      // 4 - Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100 (inclusive).
+
+      /*5 - Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário
+       e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo. */
+
+
+    </script>
+  </body>
+</html>
